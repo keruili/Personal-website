@@ -11,7 +11,6 @@ import {
   Mail, 
   Github, 
   Twitter, 
-  Linkedin, 
   ChevronRight, 
   Menu, 
   X,
@@ -33,8 +32,8 @@ interface TeamMember {
   links: {
     github?: string;
     twitter?: string;
-    linkedin?: string;
     website?: string;
+    email?: string;
   };
 }
 
@@ -62,7 +61,10 @@ const TEAM: TeamMember[] = [
     role: "Principal Investigator",
     image: "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=8K3WlZEAAAAJ", // Google Scholar profile photo
     bio: "Assistant Professor",
-    links: { linkedin: "#", website: "https://sites.google.com/view/kerui" }
+    links: { 
+      website: "https://sites.google.com/view/kerui",
+      email: "keruili@cityu.edu.hk" 
+    }
   },
   {
     name: "Prospective Students",
@@ -272,8 +274,12 @@ export default function App() {
                   </div>
                   <p className="text-sm text-solar-base00 leading-snug font-medium line-clamp-3">{person.bio}</p>
                   <div className="flex gap-4 pt-2">
-                    {person.links.website && <a href={person.links.website} className="text-solar-base1 hover:text-solar-blue"><ExternalLink size={16} /></a>}
-                    {person.links.linkedin && <a href={person.links.linkedin} className="text-solar-base1 hover:text-solar-blue"><Linkedin size={16} /></a>}
+                    {person.links.email && (
+                      <a href={`mailto:${person.links.email}`} className="text-solar-base1 hover:text-solar-blue transition-colors" title="Email">
+                        <Mail size={16} />
+                      </a>
+                    )}
+                    {person.links.website && <a href={person.links.website} className="text-solar-base1 hover:text-solar-blue transition-colors" title="Website"><ExternalLink size={16} /></a>}
                   </div>
                 </div>
               </div>
