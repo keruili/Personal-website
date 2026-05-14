@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-solar-bg: #FFFFFF;
+  --color-solar-base2: #F1F5F9;
+  --color-solar-base1: #93a1a1;
+  --color-solar-base00: #657b83;
+  --color-solar-ink: #073642;
+  --color-solar-blue: #268bd2;
+  --color-solar-orange: #cb4b16;
+  --color-solar-green: #859900;
+  --color-solar-cyan: #2aa198;
+}
+
+@layer base {
+  body {
+    @apply font-sans tracking-tight text-solar-ink bg-solar-bg selection:bg-solar-blue selection:text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold leading-tight;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-sm font-semibold tracking-tight text-solar-base00 hover:text-solar-blue transition-colors;
+  }
+
+  .btn-primary {
+    @apply px-6 py-2.5 bg-solar-blue text-white text-sm font-bold hover:brightness-110 active:scale-95 transition-all rounded;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2.5 border-2 border-solar-base2 text-solar-ink text-sm font-bold hover:bg-solar-base2 transition-all rounded;
+  }
+
+  .section-label {
+    @apply text-xs font-black uppercase text-solar-blue tracking-[0.2em] mb-6 block border-b border-solar-base2 pb-2;
+  }
+
+  .research-card {
+    @apply bg-solar-base2/30 border border-solar-base2 p-8 rounded-lg hover:shadow-lg transition-all;
+  }
+}
+
+.text-massive {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
