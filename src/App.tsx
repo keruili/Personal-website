@@ -60,7 +60,7 @@ const TEAM: TeamMember[] = [
   {
     name: "Dr. Kerui Li",
     role: "Principal Investigator",
-    image: "https://lh3.googleusercontent.com/sitesv/AA5AbUBry2Lu3MTxx6NGofigo8jatD7aJ8OYyuQOZS3468-2AWTMhYCAKHa4cjw5dqWhuwGgMamoKqeJIEU3TYYsEN509yDc9llTRZ6dPGseKBEAh90TAPl4VrTyTnZ7Qw9kP46ARxc_x15KPmm_yDRQiOvkgqXj760rK1jINyns9ES3dBNkkN6Zz9kATqQBpy248buO3W4M3xhqR6Z8ueICCMAqAu-03klpiwBO3b4=w1280", // This is a placeholder as I don't have his direct image URL easily accessible or I should use a generic professor one
+    image: "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=8K3WlZEAAAAJ", // Google Scholar profile photo
     bio: "Assistant Professor",
     links: { linkedin: "#", website: "https://sites.google.com/view/kerui" }
   },
