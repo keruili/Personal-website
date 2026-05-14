@@ -256,11 +256,11 @@ export default function App() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {TEAM.map((person, i) => (
               <div key={i} className="research-card flex flex-col sm:flex-row items-center sm:items-start gap-8 group text-center sm:text-left">
-                <div className="w-32 h-32 rounded bg-solar-base2 border border-solar-base1/20 overflow-hidden shrink-0 flex items-center justify-center p-2">
+                <div className="w-32 h-32 rounded-2xl bg-solar-base2 border border-solar-base1/20 overflow-hidden shrink-0 flex items-center justify-center">
                   {person.image ? (
-                    <img src={person.image} alt={person.name} className="max-w-full max-h-full object-contain transition-all duration-500" />
+                    <img src={person.image} alt={person.name} className="w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-105" />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center">
+                    <div className="w-full h-full flex items-center justify-center p-2">
                       <Users className="text-solar-base1" size={40} />
                     </div>
                   )}
